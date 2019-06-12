@@ -85,4 +85,6 @@ Now that everything is in place, we can use OBS Studio and the "obs-v4l2sink" pl
 1. In the program you wish to use your chroma keying for, select the fake device (It was called "Dummy video device" on my system)
 1. Have fun streaming! (Don't forget to "Stop" the device in OBS Studio when you're done)
 
-<b id="footnote1">1</b> [RPM Fusion: Command Line Setup using rpm](https://rpmfusion.org/Configuration) [↩](#add-free-repo)
+
+##### Footnote:
+<b id="footnote1">[1]</b> [RPM Fusion: Command Line Setup using rpm](https://rpmfusion.org/Configuration) [↩](#add-free-repo)
