@@ -1,5 +1,5 @@
-# Setting up a "green screen" for live video in Fedora
-Have you ever seen a "green screen" and wondered if you could use that effect yourself? I had that thought for a long time, and always thought it was complicated, or required special colors or backgrounds. In truth, it's actually so simple, I'm now using the idea with my laptop webcam. This guide will be written for Linux, and the Fedora distribution in particular, but much of the approach should work across Linux distributions with minor command adaptations.
+# Setting up a "GREEN SCREEN" for live video in Fedora
+Have you ever seen a "GREEN SCREEN" and wondered if you could use that effect yourself? I had that thought for a long time, and always thought it was complicated, or required special colours or backgrounds. In truth, it's actually so simple, I'm now using the idea with my laptop webcam. This guide will be written for Linux, and the Fedora distribution in particular, but much of the approach should work across Linux distributions with minor command adaptations.
 
 ### Pre-requisites
 - Fedora 30 or higher (lower versions might work, but I didn't test any)
@@ -8,11 +8,11 @@ Have you ever seen a "green screen" and wondered if you could use that effect yo
 - Some kind of video capture tool installed on / attached to your Linux system (I use a webcam)
 - Basic working knowledge of how to clone Git repositories
 
-### Color Preparation
-1. Pick a color that will be your chroma key. I recommend a color that you don't typically wear or otherwise use in your shots... unless you want your clothes or other objects to be the "screen"!
-1. Take a picture or screenshot of that color with the video device you have chosen. This will help to ensure that, whatever the color actually is, you can verify what your video device will "see".
-1. Use any graphics editor with a color selection tool ([GIMP](https://www.gimp.org/) works well) to load the screenshot you have taken
-1. Use the color selection tool in your editor to get the RGB or HTML representation of that color (ideally, get both!)
+### Colours Preparation
+1. Pick a colour that will be your chroma key. I recommend a colour that you don't typically wear or otherwise use in your shots... unless you want your clothes or other objects to be the "screen"!
+1. Take a picture or screenshot of that colour with the video device you have chosen. This will help to ensure that, whatever the colour actually is, you can verify what your video device will "see".
+1. Use any graphics editor with a colour selection tool ([GIMP](https://www.gimp.org/) works well) to load the screenshot you have taken
+1. Use the colour selection tool in your editor to get the RGB or HTML representation of that colour (ideally, get both!)
 
 ### Installing OBS Studio
 1. First, you will want to install [Open Broadcaster Software Studio](https://obsproject.com/download) (OBS Studio). How to do this varies across operating systems and even between Linux distributions, but for Fedora we'll use the RPM Fusion "free" repository.
@@ -68,12 +68,12 @@ OBS Studio should already have detected your video capture device, and if it's a
 1. In the "Sources" box near the lower left corner, right-click your video capture device and select the "Filters" option
 1. In the bottom left of the Filters screen is an "Effect Filters" box. Click the "+" button and select "Chroma Key"
 1. Select the new "Chroma Key" option in Effect Filters, if it isn't selected already
-1. Next to the "Key Color" field is a button named "Select color". Click it
-1. In the new "Key Color" popup, enter the color (in RGB or HTML values) that you collected in the [Color Preparation](#color-preparation) step. Click "OK"
-1. The area which matches this color may now be a different color, or display artifacts or "cloudiness". For now, ignore this and click "Close" on the "Filters" dialog
+1. Next to the "Key Colour" field is a button named "Select colour". Click it
+1. In the new "Key Colour" popup, enter the colour (in RGB or HTML values) that you collected in the [Colours Preparation](#colour-preparation) step. Click "OK"
+1. The area which matches this colour may now be a different colour, or display artifacts or "cloudiness". For now, ignore this and click "Close" on the "Filters" dialog
 1. In the "Sources" box, click the "+" and select "Image"
 1. In the "Create/Select Source" dialog, select "Create new" and title it "Test Image". Click "OK"
-1. In the "Sources" box, you should now have your video capture device and your "Test Image". If things have gone smoothly, you will see your selected test image instead of the areas which match the chroma key color you have already set up
+1. In the "Sources" box, you should now have your video capture device and your "Test Image". If things have gone smoothly, you will see your selected test image instead of the areas which match the chroma key colour you have already set up
 1. If the chroma keying is rough or doesn't match as you'd like, right-click on the video source and once again select "Filters" > "Effect Filters" > "Chroma Key". From here you can change the settings in real time until they match what you want
 
 ### Streaming To v4l2loopback
