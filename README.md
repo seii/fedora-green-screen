@@ -55,7 +55,7 @@ We now have a way to create loopback video devices in the Linux kernel, but OBS 
 1. Clone the [obsstudio](https://github.com/obsproject/obs-studio) repository using the command `git clone --recursive https://github.com/obsproject/obs-studio.git`
 1. Make sure that the `qt` development library is installed by running the command `sudo dnf install qt5-qtbase-devel`
 1. Navigate to the `obs-v4l2sink` directory
-1. Prepare to make the plugin by running the command `cmake -D LIBOBS_INCLUDE_DIR="../obs-studio/cmake" -D LIBOBS_LIB=/usr/lib64/libobs.so.0" -D CMAKE_INSTALL_PREFIX=/usr .`
+1. Prepare to make the plugin by running the command `cmake -D LIBOBS_INCLUDE_DIR="../obs-studio/cmake" -D LIBOBS_LIB=/usr/lib64/libobs.so.0" -D CMAKE_INSTALL_PREFIX=/usr .` If this command failes you have to first configure obsstudio using `cmake -DUNIX_STRUCTURE=1 ..` in the obs-studio directory.
 1. Actually make it by running the command `make -j4`
 1. Install the plugin by running the command `sudo make install`
 1. The plugin has been installed to `/usr/lib/obs-plugins`, but Fedora uses the location `/usr/lib64/obs-plugins`. Fix this with a soft link by running the command `sudo ln -s /usr/lib/obs-plugins/v4l2sink.so /usr/lib64/obs-plugins/v4l2sink.so`
